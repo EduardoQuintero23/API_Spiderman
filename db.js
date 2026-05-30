@@ -55,4 +55,4 @@ async function startDB() {
 
 startDB();
 
-export { Peliculas }
+export { Peliculas, db }

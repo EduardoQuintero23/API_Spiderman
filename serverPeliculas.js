@@ -1,5 +1,5 @@
 import express from 'express'
-import { Peliculas } from './db.js'
+import { Peliculas, db } from './db.js'
 import jwt from 'jsonwebtoken'
 import { Sequelize } from 'sequelize'
 
@@ -40,9 +40,9 @@ const verificarToken = (req, res, next) => {
 app.use(express.json())
 
 try {
-    await sequelize.authenticate();
+    await db.authenticate();
     console.log('Conexión con PostgreSQL establecida');
-    await sequelize.sync();
+    await db.sync();
     } catch (error) {
         console.error('Error al inicializar la base de datos', error);
     }
