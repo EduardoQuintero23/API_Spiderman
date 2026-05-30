@@ -51,7 +51,7 @@ app.listen(process.env.PORT, () => {
     console.log('Servidor iniciado en el puerto ', PORT)
 })
 
-app.get('/', verificarToken, async (req, res) => {
+app.get('/', async (req, res) => {
     res.send('API funcionando')
 });
 
