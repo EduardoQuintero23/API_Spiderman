@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 import { Sequelize } from 'sequelize'
 
 const app = express()
-const port = 3000
+const PORT = 3000
 
 const validacionDatos = (req, res, next) => {
     const {Titulo, ActorPrincipal, Año} = req.body;
